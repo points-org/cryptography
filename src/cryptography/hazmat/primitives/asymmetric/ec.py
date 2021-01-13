@@ -251,6 +251,11 @@ class SECP256R1(object):
     name = "secp256r1"
     key_size = 256
 
+@utils.register_interface(EllipticCurve)
+class SM2(object):
+    name = "SM2"
+    key_size = 256
+
 
 @utils.register_interface(EllipticCurve)
 class SECP256K1(object):
@@ -310,6 +315,7 @@ _CURVE_TYPES = {
     "brainpoolP256r1": BrainpoolP256R1,
     "brainpoolP384r1": BrainpoolP384R1,
     "brainpoolP512r1": BrainpoolP512R1,
+    "SM2": SM2,
 }
 
 

@@ -145,6 +145,11 @@ class SHA256(object):
     digest_size = 32
     block_size = 64
 
+@utils.register_interface(HashAlgorithm)
+class SM3(object):
+    name = "sm3"
+    digest_size = 32
+    block_size = 64
 
 @utils.register_interface(HashAlgorithm)
 class SHA384(object):

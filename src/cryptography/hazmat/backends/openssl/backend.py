@@ -1946,7 +1946,7 @@ class Backend(object):
                     write_bio = self._lib.PEM_write_bio_RSAPrivateKey
                 elif key_type == self._lib.EVP_PKEY_DSA:
                     write_bio = self._lib.PEM_write_bio_DSAPrivateKey
-                elif key_type == self._lib.EVP_PKEY_EC:
+                elif key_type == self._lib.EVP_PKEY_EC or key_type == self._lib.EVP_PKEY_SM2:
                     write_bio = self._lib.PEM_write_bio_ECPrivateKey
                 else:
                     raise ValueError(
